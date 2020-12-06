@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Appprueba.Page1">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Notas fáciles"
+               HorizontalOptions="Center"
+               FontAttributes="Bold"
+               FontSize="Large"/>
+            <Entry x:Name="entrada" Keyboard="Chat"
+               ></Entry>
+
+            <Editor x:Name="editor"
+                Placeholder="Escribe tus notas aquí y dale a guardar"
+              Keyboard="Chat"
+                AutoSize="TextChanges"
+               
+                
+                />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button Text="Guardar"
+                    Clicked="BotonParaSalvar" 
+                    BackgroundColor="Aquamarine"
+                     TextColor="Black"
+                    />
+                <Button Grid.Column="1"
+                    Text="Eliminar todo"
+                    Clicked="BotonParaEliminar"
+                    BackgroundColor="Aquamarine"
+                    TextColor="Black"
+                    
+                    
+                    />
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

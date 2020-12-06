@@ -1,0 +1,16 @@
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\bin\Debug\netstandard2.0\Appprueba.deps.json
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\bin\Debug\netstandard2.0\Appprueba.dll
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\bin\Debug\netstandard2.0\ref\Appprueba.dll
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\bin\Debug\netstandard2.0\Appprueba.pdb
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\obj\Debug\netstandard2.0\Appprueba.csprojAssemblyReference.cache
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\obj\Debug\netstandard2.0\Appprueba.AssemblyInfoInputs.cache
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\obj\Debug\netstandard2.0\Appprueba.AssemblyInfo.cs
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\obj\Debug\netstandard2.0\Appprueba.csproj.CoreCompileInputs.cache
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\obj\Debug\netstandard2.0\Appprueba.dll
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\obj\Debug\netstandard2.0\ref\Appprueba.dll
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\obj\Debug\netstandard2.0\Appprueba.pdb
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\obj\Debug\netstandard2.0\Page1.xaml.g.cs
+C:\Users\ferna\source\repos\Appprueba\Appprueba\Appprueba\obj\Debug\netstandard2.0\Page2.xaml.g.cs
