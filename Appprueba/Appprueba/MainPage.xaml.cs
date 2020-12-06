@@ -6,61 +6,84 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace Appprueba
 {
-   
-
+    
     public partial class MainPage : ContentPage
     {
-        
+        static readonly string path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+        string _notesFileName = Path.Combine(path, "notes.txt");
 
 
-        public IList<Class1> Class1s { get; private set; }
+        public IList<Nota> notas { get; private set; }
 
         /*public IList<Page1> Page1s { get; private set; }*/
         public MainPage()
         {
             InitializeComponent();
-            Class1s = new List<Class1>();
-
-            
-
-            Class1s.Add(new Class1
-
-            { name = "n",
-
-              
-  
-            }
-                );
-
-            /*Page1s = new List<Page1>();
-            Page1s.Add(new Page1
-            { hola=entrada,})*/
-
-
             BindingContext = this;
 
-         
+            if (File.Exists(_notesFileName))
+            {
+                var textoSerializado =  File.ReadAllText(_notesFileName);
+                if (string.IsNullOrEmpty(textoSerializado))
+                {
+                    notas = new List<Nota>();
+                    notas.Add(new Nota
+                    {
+                        Titulo = "Hola",
+                        Contenido = "Soy una nota"
+                    });
+                }
+                else
+                {
+                    notas =  JsonConvert.DeserializeObject<List<Nota>>(textoSerializado);
+                }
+            }
+            else
+            {
+                notas = new List<Nota>();
+                notas.Add(new Nota
+                {
+                    Titulo = "Hola",
+                    Contenido = "Soy una nota"
+                });
+            }
+            listadoNotas.ItemsSource = notas;
         }
 
-       
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            if (!File.Exists(_notesFileName))
+            {
+                return;
+            }
+            var textoSerializado =  File.ReadAllText(_notesFileName);
+            if (!string.IsNullOrEmpty(textoSerializado))
+            {
+                listadoNotas.ItemsSource = null;
+                notas =  JsonConvert.DeserializeObject<List<Nota>>(textoSerializado);
+                listadoNotas.ItemsSource = notas;
+            }
+        }
+
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            Class1 selectedItem = e.SelectedItem as Class1;
+            Nota selectedItem = e.SelectedItem as Nota;
         }
 
         private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            Class1 tappedItem = e.Item as Class1;
+            Nota tappedItem = e.Item as Nota;
+            Navigation.PushAsync(new Page1(tappedItem));
         }
 
-        private void boton1_Clicked(object sender, EventArgs e)
+        void Button_OnClicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new Page1());
         }
-
-       
     }
 }
