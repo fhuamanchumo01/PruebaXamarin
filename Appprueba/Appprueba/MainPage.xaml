@@ -2,10 +2,13 @@
 
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Appprueba.MainPage">
+             x:Class="Appprueba.MainPage"
+           
+             
+             >
 
     <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+        <Frame BackgroundColor="#2BC9DF" Padding="24" CornerRadius="0">
             <Label Text="Notas Simples" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" />
         </Frame>
 
@@ -34,6 +37,11 @@
                                    Grid.Row="1"
                                    Text="{Binding Contenido}"
                                    FontAttributes="None" />
+                            <Button Text="Borrar nota" 
+                                    
+                                    BackgroundColor="Blue"
+                                    TextColor="White"
+                                    Clicked="ButtonBorrar"/>
                         </Grid>
                     </ViewCell>
                 </DataTemplate>
@@ -44,7 +52,7 @@
 
 
 <Button Text="Nueva  nota"
-        Background="Orange"
+        Background="#2BC9DF"
         TextColor="White"
         Padding="8,16"
         Margin="0,16"

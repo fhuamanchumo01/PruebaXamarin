@@ -27,13 +27,13 @@
                 </Grid.ColumnDefinitions>
                 <Button Text="Guardar"
                         Clicked="BotonParaSalvar"
-                        BackgroundColor="Aquamarine"
-                        TextColor="Black" />
+                        BackgroundColor="#2BC9DF"
+                        TextColor="White" />
                 <Button Grid.Column="1"
                         Text="Eliminar todo"
                         Clicked="BotonParaEliminar"
-                        BackgroundColor="Aquamarine"
-                        TextColor="Black" />
+                        BackgroundColor="#2BC9DF"
+                        TextColor="White" />
             </Grid>
         </StackLayout>
     </ContentPage.Content>

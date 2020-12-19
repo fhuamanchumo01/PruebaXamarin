@@ -75,9 +75,12 @@ namespace Appprueba
                 itemEnLista.Contenido = editor.Text;
             }
 
-
-            var textoSerializado = JsonConvert.SerializeObject(lista);
-            File.WriteAllText(_notesFileName, textoSerializado);
+            // Si en Titulo no hay texto, no te dejará guardar
+            if (entrada.Text != null)
+            {
+                var textoSerializado = JsonConvert.SerializeObject(lista);
+                File.WriteAllText(_notesFileName, textoSerializado);
+            }
         }
 
         void BotonParaEliminar(object sender, EventArgs e)
@@ -90,19 +93,6 @@ namespace Appprueba
             editor.Text = string.Empty;
         }
 
-        //hola
-
-        /*
-        public string hola { get; set; }
-
-
-
-
-
-        public override string ToString()
-        {
-            return hola;
-        }
-        */
+       
     }
 }

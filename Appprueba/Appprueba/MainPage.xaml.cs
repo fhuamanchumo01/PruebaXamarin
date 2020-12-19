@@ -85,5 +85,11 @@ namespace Appprueba
         {
             Navigation.PushAsync(new Page1());
         }
+
+        private void ButtonBorrar(object sender, EventArgs e)
+        {
+            
+            listadoNotas.ItemsSource = string.Empty;
+        }
     }
 }
