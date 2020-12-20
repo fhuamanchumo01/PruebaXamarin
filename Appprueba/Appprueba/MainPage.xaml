@@ -39,7 +39,7 @@
                                    FontAttributes="None" />
                             <Button Text="Borrar nota" 
                                     
-                                    BackgroundColor="Blue"
+                                    BackgroundColor="#00C5C7"
                                     TextColor="White"
                                     Clicked="ButtonBorrar"/>
                         </Grid>
