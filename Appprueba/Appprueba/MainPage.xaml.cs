@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using System.IO;
 using Newtonsoft.Json;
+using Xamarin.Forms.Internals;
 
 namespace Appprueba
 {
@@ -88,8 +89,17 @@ namespace Appprueba
 
         private void ButtonBorrar(object sender, EventArgs e)
         {
-            
-            listadoNotas.ItemsSource = string.Empty;
+            var button = sender as Button;
+            if (button != null)
+            {
+                //lo ha podido castear o convertir
+                var grid = button.Parent as Grid;
+                var viewcell = grid.Parent as ViewCell;
+                var bindingContext = viewcell.BindingContext;
+                var nota = bindingContext as Nota;
+                var lista = GestorNotas.BorrarNota(nota);
+                listadoNotas.ItemsSource = lista;
+            }
         }
     }
 }
