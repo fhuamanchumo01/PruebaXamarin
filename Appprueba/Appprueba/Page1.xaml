@@ -29,11 +29,7 @@
                         Clicked="BotonParaSalvar"
                         BackgroundColor="#2BC9DF"
                         TextColor="White" />
-                <Button Grid.Column="1"
-                        Text="Eliminar todo"
-                        Clicked="BotonParaEliminar"
-                        BackgroundColor="#2BC9DF"
-                        TextColor="White" />
+                
             </Grid>
         </StackLayout>
     </ContentPage.Content>

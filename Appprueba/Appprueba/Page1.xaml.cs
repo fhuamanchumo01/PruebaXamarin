@@ -60,10 +60,7 @@ namespace Appprueba
             }
         }
 
-        void BotonParaEliminar(object sender, EventArgs e)
-        {
-            editor.Text = string.Empty;
-        }
+        
         
     }
 }

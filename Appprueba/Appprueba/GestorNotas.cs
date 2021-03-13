@@ -40,7 +40,13 @@ namespace Appprueba
         public static List<Nota> CrearNota(Nota  nota)
         {
             var lista = LeerNotas();
-            var ultimoId = lista.Max(x => x.Id) + 1;
+            var ultimoId=0;
+            if (lista.Count == 0) {
+                ultimoId = 1;
+            }
+            else {
+                ultimoId = lista.Max(x => x.Id) + 1;
+            }
             nota.Id = ultimoId;
             lista.Add(nota);
             GuardarNotas(lista);
