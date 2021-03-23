@@ -7,13 +7,18 @@
              
              >
    
-    <StackLayout BackgroundColor="white">
+    <Grid BackgroundColor="white">
+        <Grid.RowDefinitions>
+             <RowDefinition Height="Auto" />
+             <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
         <Frame BackgroundColor="#2BC9DF" Padding="15" CornerRadius="0">
             <Label Text="Notas fáciles" HorizontalTextAlignment="Center" TextColor="White" FontSize="26" />
             
         </Frame>
-        <ScrollView>
+       
         <ListView
+            Grid.Row="1"
             x:Name="listadoNotas"
             ItemsSource="{Binding Class1s}" HasUnevenRows="True" ItemSelected="ListView_ItemSelected"
             ItemTapped="ListView_ItemTapped">
@@ -55,11 +60,11 @@
         </ListView>
 
 
-            </ScrollView>
+            
         <Button Text="+"
             Background="#2BC9DF"
             TextColor="White"
-     
+            Grid.Row="1"
             Margin="0,16"
             FontSize="34"
             Clicked="Button_OnClicked"
@@ -67,9 +72,11 @@
             HorizontalOptions ="Center"
             WidthRequest      ="60"
             HeightRequest     ="60"
-            CornerRadius      ="40"
+            CornerRadius      ="30"
+                Padding="0"
+                
         >
         </Button>
-    </StackLayout>
+    </Grid>
        
 </ContentPage>
