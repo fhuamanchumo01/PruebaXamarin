@@ -35,8 +35,9 @@ namespace Appprueba
         void BotonParaSalvar(object sender, EventArgs e)
         {
             // Si en Titulo no hay texto, no te dejará guardar
-            if (entrada.Text == null)
+            if (String.IsNullOrWhiteSpace(entrada.Text))
             {
+                DisplayAlert("Error", "La nota debe tener título","OK");
                 return;
             }
             
@@ -48,7 +49,7 @@ namespace Appprueba
                 {
                     Titulo = entrada.Text,
                     Contenido = editor.Text
-                };
+                };                              
                 GestorNotas.CrearNota(_item);
             }
             else

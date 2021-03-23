@@ -4,33 +4,48 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Appprueba.Page1">
     <ContentPage.Content>
-        <StackLayout>
+        <ScrollView>
+        <StackLayout BackgroundColor="AliceBlue">
             <Label Text="Notas fáciles"
+                   TextColor="Black"
                    HorizontalOptions="Center"
                    FontAttributes="Bold"
                    FontSize="Large" />
             <!--TITULO-->
-            <Label Text="Título" Margin="8,0" />
-            <Entry x:Name="entrada" Keyboard="Chat" Margin="8,4" />
+            <Label Text="Título" Margin="8,0"
+                   TextColor="DarkBlue"/>
+            <Entry x:Name="entrada"
+                   Keyboard="Chat"
+                   Margin="8,4"
+                   TextColor="Black"
+                   PlaceholderColor="Black"
+                   Placeholder="Intruce el título"/>
 
             <!--NOTAS-->
-            <Label Text="Notas" Margin="8,0" />
+            <Label Text="Notas" Margin="8,0" TextColor="DarkBlue"/>
             <Editor x:Name="editor"
+                    TextColor="Black"
+                    PlaceholderColor="Black"
                     Placeholder="Escribe tus notas aquí y dale a guardar"
                     Margin="8,4"
                     Keyboard="Chat"
                     AutoSize="TextChanges" />
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Button Text="Guardar"
+            <StackLayout VerticalOptions="End"
+                         Margin="20">
+            <Button Text="✔"
                         Clicked="BotonParaSalvar"
                         BackgroundColor="#2BC9DF"
-                        TextColor="White" />
+                        TextColor="White"
+                             
+                          WidthRequest      ="40"
+                        HeightRequest     ="40"
+                        CornerRadius      ="40"
+                       VerticalOptions   ="End"
+                        HorizontalOptions ="Center"
+                        />
                 
-            </Grid>
+           </StackLayout>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

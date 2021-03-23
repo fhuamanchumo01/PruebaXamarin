@@ -6,12 +6,13 @@
            
              
              >
-
-    <StackLayout>
-        <Frame BackgroundColor="#2BC9DF" Padding="24" CornerRadius="0">
-            <Label Text="Notas Simples" HorizontalTextAlignment="Center" TextColor="White" FontSize="36" />
+   
+    <StackLayout BackgroundColor="white">
+        <Frame BackgroundColor="#2BC9DF" Padding="15" CornerRadius="0">
+            <Label Text="Notas fáciles" HorizontalTextAlignment="Center" TextColor="White" FontSize="26" />
+            
         </Frame>
-
+        <ScrollView>
         <ListView
             x:Name="listadoNotas"
             ItemsSource="{Binding Class1s}" HasUnevenRows="True" ItemSelected="ListView_ItemSelected"
@@ -28,37 +29,47 @@
                                 <ColumnDefinition Width="auto" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-
-                            <Label Grid.Column="1"
-
+                            <Label Grid.Column="0"
+                                   TextColor="Black"
                                    Text="{Binding Titulo}"
                                    FontAttributes="Bold" />
-                            <Label Grid.Column="1"
-                                   Grid.Row="1"
-                                   Text="{Binding Contenido}"
-                                   FontAttributes="None" />
-                            <Button Text="Borrar nota" 
-                                    
-                                    BackgroundColor="#00C5C7"
+                            
+                            <Button Text="X" 
+                                    Grid.Column="1"
+                                    BackgroundColor="Red"
                                     TextColor="White"
-                                    Clicked="ButtonBorrar"/>
+                                    Clicked="ButtonBorrar"
+                                    WidthRequest      ="40"
+                                    HeightRequest     ="40"
+                                    CornerRadius      ="40"
+                                    VerticalOptions   ="End"
+                                    HorizontalOptions ="EndAndExpand"
+                                    />
                         </Grid>
+
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-
+            
 
         </ListView>
 
 
-<Button Text="Nueva  nota"
-        Background="#2BC9DF"
-        TextColor="White"
-        Padding="8,16"
-        Margin="0,16"
-        FontSize="24"
-        Clicked="Button_OnClicked">
-</Button>
+            </ScrollView>
+        <Button Text="+"
+            Background="#2BC9DF"
+            TextColor="White"
+     
+            Margin="0,16"
+            FontSize="34"
+            Clicked="Button_OnClicked"
+            VerticalOptions   ="End"
+            HorizontalOptions ="Center"
+            WidthRequest      ="60"
+            HeightRequest     ="60"
+            CornerRadius      ="40"
+        >
+        </Button>
     </StackLayout>
-
+       
 </ContentPage>
